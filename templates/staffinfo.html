@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Staff Info</title>
+</head>
+<body>
+    <h1>Reservation List:</h1>
+    <table>
+        <tr>
+            <th>Full Name</th>
+            <th>Dining Date</th>
+            <th>Dining Time</th>
+            <th>Size of Party</th>
+        </tr>
+        {% for newres in newress %}
+        <tr>
+            <td>{{ newres[CusName] }}</td>
+            <td>{{ newres[CusDate] }}</td>
+            <td>{{ newres[CusTime] }}</td>
+            <td>{{ newres[CusParty] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+  <a href = "/home">Return to Main Page</a>
+</body>
+</html>
