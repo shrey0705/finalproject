@@ -2,8 +2,50 @@
 <html>
 <head>
     <title>Reservation</title>
+<!--css adopted from w3schools-->
+  <style>
+        form {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"],
+        input[type="date"],
+        input[type="time"],
+        input[type="number"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: green;
+        }
+    </style>
 </head>
 <body>
+  <form action = "{{ url_for('addres') }}" method = "POST">
     <h1>Create a Reservation:</h1>
     <form method="POST">
         <label for="CusName">Full Name (First Name and Last Name):</label>
@@ -14,7 +56,7 @@
         <input type="time" id="CusTime" name="CusTime" required><br><br>
         <label for="CusParty">Size of Party:</label>
         <input type="number" id="CusParty" name="CusParty" required><br><br>
-        <input type="submit" value="Register">
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
